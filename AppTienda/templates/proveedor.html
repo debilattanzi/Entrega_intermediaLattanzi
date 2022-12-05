@@ -3,5 +3,18 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="mb-5"> PROVEEDOR </h1>
+<h1 class="mb-5"> PROVEEDORES </h1>
+{% endblock %}
+
+{% block intermedio %}
+<h1 class="mb-5"> Registro Proveedores </h1>
+
+<form action="{% url 'proveedor' %}" method="post" > {% csrf_token %}
+
+<table>
+    {{ form_proveedor.as_table}}
+</table>
+<input type="submit" value="AGREGAR PROVEEDOR">
+
+</form>
 {% endblock %}

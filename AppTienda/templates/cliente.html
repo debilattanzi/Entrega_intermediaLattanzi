@@ -6,3 +6,15 @@
 <h1 class="mb-5"> CLIENTES </h1>
 {% endblock %}
 
+{% block intermedio %}
+<h1 class="mb-5"> Registro Cliente </h1>
+
+<form action="{% url 'cliente' %}" method="post" > {% csrf_token %}
+
+<table>
+    {{ form_cliente.as_table}}
+</table>
+<input type="submit" value="CREAR CLIENTE">
+
+</form>
+{% endblock %}
