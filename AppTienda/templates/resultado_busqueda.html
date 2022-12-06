@@ -1,0 +1,23 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h2 class="mb-5"> RESULTADO BUSQUEDA DE CLIENTE </h2>
+{% endblock %}
+
+{% block intermedio %}
+
+
+<ul>
+    {% for cliente in apellido_cliente %}
+
+        <li> {{ cliente.apellido }} </li>
+        <li> {{ cliente.nombre }} </li>
+
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}

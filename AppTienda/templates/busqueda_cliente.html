@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> CLIENTES </h1>
+{% endblock %}
+
+{% block intermedio %}
+<h1 class="mb-5"> Busqueda de cliente </h1>
+
+<form action="{% url 'buscar' %}" method="GET" >
+
+  <input type="text" name="apellido" id="apellido">
+
+  <input type="submit" value="BUSCAR CLIENTE">
+
+</form>
+
+{{ mensaje }}
+
+{% endblock %}
