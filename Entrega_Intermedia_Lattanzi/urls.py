@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from AppTienda.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('AppTienda/', include('AppTienda.urls'))
+    path('AppTienda/', include('AppTienda.urls')),
+    path("", inicio, name="inicio")
+
 ]
